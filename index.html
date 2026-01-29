@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="style.css">
     <title>Youtube</title>
 </head>
+   
 <body>
+    <input type="checkbox" id="theme-toggle">
+    <div class="page">  
 
 <nav>
     <section id="menu">
@@ -21,7 +24,7 @@
         </svg>
 
         <!--Youtube logo-->
-        <svg xmlns="http://www.w3.org/2000/svg" id="yt-ringo2-svg_yt9" width="93" height="20" viewBox="0 0 93 20" class="brand-logo"  focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit;">
+        <svg class= "youtube-logo" xmlns="http://www.w3.org/2000/svg" id="yt-ringo2-svg_yt9" width="93" height="20" viewBox="0 0 93 20" class="brand-logo"  focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit;">
             <g>
                 <path d="M14.4848 20C14.4848 20 23.5695 20 25.8229 19.4C27.0917 19.06 28.0459 18.08 28.3808 16.87C29 14.65 29 9.98 29 9.98C29 9.98 29 5.34 28.3808 3.14C28.0459 1.9 27.0917 0.94 25.8229 0.61C23.5695 0 14.4848 0 14.4848 0C14.4848 0 5.42037 0 3.17711 0.61C1.9286 0.94 0.954148 1.9 0.59888 3.14C0 5.34 0 9.98 0 9.98C0 9.98 0 14.65 0.59888 16.87C0.954148 18.08 1.9286 19.06 3.17711 19.4C5.42037 20 14.4848 20 14.4848 20Z" fill="#FF0033"></path>
                 <path d="M19 10L11.5 5.75V14.25L19 10Z" fill="white"></path>
@@ -56,10 +59,10 @@
     </section>
 
     <section id="user">
-        <button id="theme-toggle" arial-label="Toggle theme">
-             🌙
-        </button>
-        
+        <label for="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+            🌙
+        </label>
+       
         <button id= "user-button">
             <!--Create Icon-->
             <svg id="createIcon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit;">
@@ -249,16 +252,20 @@
                 </div>
 
                 <div class="video-details">
-                    <p class="title">YouTube thumbnail..</p>
-                    <p class="posted-by">6K views &bull; 3 days ago</p> 
+                    <p class="title">Learn to do it alone..</p>
+                    <p class="posted-by">23K views &bull; 1 week ago</p> 
                 </div>
                 
                 <div class="more-options">
-                        <svg  class="" "http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit;"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path>
-                        </svg>
-                </div>
+                    <details>
+                    <summary class="more-btn">⋮</summary>
 
-                 <video class="preview-video" src="" muted playsinline></video>
+                    <div class="speed-popup">
+                        <button>Play slower</button>
+                        <button>Play faster</button>
+                    </div>
+                    </details>
+                </div>
 
                     <!-- Watch Later & Playlist buttons -->
                     <div class="video-actions">
@@ -279,17 +286,21 @@
                 </div>
 
                 <div class="video-details">
-                    <p class="title">YouTube thumbnail..</p>
+                    <p class="title">Come with us..|2026..</p>
                     <p class="posted-by">6K views &bull; 3 days ago</p> 
                 </div>
                 
                 <div class="more-options">
-                        <svg  class="" "http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit;"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path>
-                        </svg>
+                    <details>
+                    <summary class="more-btn">⋮</summary>
+
+                        <div class="speed-popup">
+                            <button>Play slower</button>
+                            <button>Play faster</button>
+                        </div>
+                    </details>
                 </div>
-
-                 <video class="preview-video" src="" muted playsinline></video>
-
+                
                     <!-- Watch Later & Playlist buttons -->
                     <div class="video-actions">
                         <button class="watch-later-btn">⏰</button>
@@ -303,24 +314,26 @@
                 <img src="resources/videos.thumbnail/thumb3">
             </div>
 
-            <video class="preview-video" src="" muted playsinline></video>
-
             <div class="details">
                 <div class="profile">
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABFFBMVEVHcEwFxtU6fOR4J/RfT+EKvdR3JuQfmNB7LPNTXd8aodYDwM5tIvlhL/1NbeRuResulN0Ews8TstohntUYrtkDyNQGwdYok+NHW/VQRPdeJvlsJP7///8GwM4EussBxM0yeeD5+vwoiNw8aec1gNl1J/EgmdcNtNEVqNMAr8w/dtppPucsjdUGh9YPrtAboNRjxdVQP/VbNPlIatx5Lu0yidpCQ+IckNaPyeBsNevH1fEAltJiSutmeekoYOQtsc690vBcnt5lMPVHU/AGbeAyLfCttPQKOujv7/w+Yd1riuMAoc1wst2r1enU7fEAoM5RN+nc7/Sx4eYAosfN6e9uKPI6qdRFAO2szO0ATuK+vvh0aPOJIVbzAAAAHHRSTlMAoJTZ/ZQfH5r9+fn5mtnZoNnZ2aDZ2dmg2R/ZVFY8WwAAAOpJREFUGJU1j+dWg0AQRscEAmlq7GV2XZYeIARM7z0x9t7e/z1cjN5fc883c858AAJFPsznj2QF/ti6EBBq2wcbLwmltFp1K87+b04IoU/48qgNQ2tX3BNK6B0O3WfttuvXFZBtSlso9u+x1fSNFOxVbFfTrp3wZhT4Rnkbco7zhp2uZTWDulG+zEIutMb4EXDOjcQlOOZ8jKMZY2ywvspKO5BibIarT13X+52G5Kmg6PpggYvlsq81el4tA3Aync6/EHH14LVravLqaRTNo+/ee9s005syxTiOJ5NX01T/654VzwuFtJpJ5h8WtiG08g8PxwAAAABJRU5ErkJggg==">
                 </div>
 
                 <div class="video-details">
-                    <p class="title">YouTube thumbnail..</p>
-                    <p class="posted-by">6K views &bull; 3 days ago</p> 
+                    <p class="title"> Learn how to create YouTube thumbnails..</p>
+                    <p class="posted-by">17K views &bull; 3 weeks ago</p> 
                 </div>
                 
                 <div class="more-options">
-                        <svg  class="" "http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit;"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path>
-                        </svg>
-                </div>
+                    <details>
+                    <summary class="more-btn">⋮</summary>
 
-                 <video class="preview-video" src="" muted playsinline></video>
+                        <div class="speed-popup">
+                            <button>Play slower</button>
+                            <button>Play faster</button>
+                        </div>
+                    </details>
+                </div>
 
                     <!-- Watch Later & Playlist buttons -->
                     <div class="video-actions">
@@ -341,16 +354,20 @@
                 </div>
 
                 <div class="video-details">
-                    <p class="title">YouTube thumbnail..</p>
-                    <p class="posted-by">6K views &bull; 3 days ago</p> 
+                    <p class="title">1st time in Africa| work trip</p>
+                    <p class="posted-by">69k views &bull; 1 month ago ago</p> 
                 </div>
                 
                 <div class="more-options">
-                        <svg  class="" "http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit;"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path>
-                        </svg>
-                </div>
+                    <details>
+                    <summary class="more-btn">⋮</summary>
 
-                 <video class="preview-video" src="" muted playsinline></video>
+                        <div class="speed-popup">
+                            <button>Play slower</button>
+                            <button>Play faster</button>
+                        </div>
+                    </details>
+                </div>
 
                     <!-- Watch Later & Playlist buttons -->
                     <div class="video-actions">
@@ -371,16 +388,20 @@
                 </div>
 
                 <div class="video-details">
-                    <p class="title">YouTube thumbnail..</p>
-                    <p class="posted-by">6K views &bull; 3 days ago</p> 
+                    <p class="title">Safari vlog..</p>
+                    <p class="posted-by">23K views &bull; 7 days ago</p> 
                 </div>
                 
                 <div class="more-options">
-                        <svg  class="" "http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit;"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path>
-                        </svg>
-                </div>
+                    <details>
+                    <summary class="more-btn">⋮</summary>
 
-                 <video class="preview-video" src="" muted playsinline></video>
+                        <div class="speed-popup">
+                            <button>Play slower</button>
+                            <button>Play faster</button>
+                        </div>
+                    </details>
+                </div>
 
                     <!-- Watch Later & Playlist buttons -->
                     <div class="video-actions">
@@ -401,16 +422,20 @@
                 </div>
 
                 <div class="video-details">
-                    <p class="title">YouTube thumbnail..</p>
-                    <p class="posted-by">6K views &bull; 3 days ago</p> 
+                    <p class="title">Make money easy..</p>
+                    <p class="posted-by">45K views &bull; 2 Months ago</p> 
                 </div>
                 
                 <div class="more-options">
-                        <svg  class="" "http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit;"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path>
-                        </svg>
-                </div>
+                    <details>
+                    <summary class="more-btn">⋮</summary>
 
-                 <video class="preview-video" src="" muted playsinline></video>
+                        <div class="speed-popup">
+                            <button>Play slower</button>
+                            <button>Play faster</button>
+                        </div>
+                    </details>
+                </div>
 
                     <!-- Watch Later & Playlist buttons -->
                     <div class="video-actions">
@@ -430,16 +455,20 @@
                 </div>
 
                 <div class="video-details">
-                    <p class="title">YouTube thumbnail..</p>
-                    <p class="posted-by">6K views &bull; 3 days ago</p> 
+                    <p class="title">Tourist things in UK...</p>
+                    <p class="posted-by">6K views &bull; 101K  2 Months ago</p> 
                 </div>
                 
-                <div class="more-options">
-                        <svg  class="" "http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit;"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path>
-                        </svg>
-                </div>
+               <div class="more-options">
+                    <details>
+                    <summary class="more-btn">⋮</summary>
 
-                 <video class="preview-video" src="" muted playsinline></video>
+                        <div class="speed-popup">
+                        <button>Play slower</button>
+                        <button>Play faster</button>
+                        </div>
+                    </details>
+                </div>
 
                     <!-- Watch Later & Playlist buttons -->
                     <div class="video-actions">
@@ -461,16 +490,20 @@
                 </div>
 
                 <div class="video-details">
-                    <p class="title">YouTube thumbnail..</p>
-                    <p class="posted-by">6K views &bull; 3 days ago</p> 
+                    <p class="title">Lights camera action trailer..</p>
+                    <p class="posted-by">111k views &bull; 3 days ago</p> 
                 </div>
                 
                 <div class="more-options">
-                        <svg  class="" "http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit;"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path>
-                        </svg>
-                </div>
+                    <details>
+                    <summary class="more-btn">⋮</summary>
 
-                 <video class="preview-video" src="" muted playsinline></video>
+                        <div class="speed-popup">
+                            <button>Play slower</button>
+                            <button>Play faster</button>
+                        </div>
+                    </details>
+                </div>
 
                     <!-- Watch Later & Playlist buttons -->
                     <div class="video-actions">
@@ -492,16 +525,20 @@
                 </div>
 
                 <div class="video-details">
-                    <p class="title">YouTube thumbnail..</p>
-                    <p class="posted-by">6K views &bull; 3 days ago</p> 
+                    <p class="title">Travel with Emma..</p>
+                    <p class="posted-by">34K views &bull; 6 Months ago</p> 
                 </div>
                 
                 <div class="more-options">
-                        <svg  class="" "http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit;"><path d="M12 4a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Zm0 6a2 2 0 100 4 2 2 0 000-4Z"></path>
-                        </svg>
-                </div>
+                    <details>
+                    <summary class="more-btn">⋮</summary>
 
-                 <video class="preview-video" src="" muted playsinline></video>
+                        <div class="speed-popup">
+                            <button>Play slower</button>
+                            <button>Play faster</button>
+                        </div>
+                    </details>
+                </div>
 
                     <!-- Watch Later & Playlist buttons -->
                     <div class="video-actions">
@@ -515,5 +552,7 @@
 
     </section>
 </main>
+</div>
     </body>
+
 </html>

@@ -1,12 +1,20 @@
+/* GENERAL STYLES */
 body {
     padding: 0;
     margin: 0;
     font-family: sans-serif;
     overflow-y: auto;
-    background: black;
-    color: var(--text-color);
+    background: white;
+    color: #000;
 }
 
+.page {
+    background-color: #ffffff;
+    color: #000000;
+    min-height: 100vh;
+}
+
+/* NAVIGATION */
 nav {
     position: fixed;
     padding-top: 8px;
@@ -15,97 +23,83 @@ nav {
     width: 100%;
     display: flex;
     height: 46px;
+    background-color: #f5f5f5;
     justify-content: space-between;
     z-index: 1000;
-    background: rgba(0,0,0,0.9);
-    color: white;
+    color: black;
 }
 
-nav .icon img,nav .icon svg {
-    filter: brightness(0) invert(1);
-}
 nav section, button {
     display: flex;
     align-items: center;
-    background: rgb(0,0,0,0.5);
-    color: white;
+    background: white;
+    cursor: pointer;
 }
-
-.brand-logo {
-    filter: none !important;
-}
-
 
 #menu svg {
     margin-left: 20px;
-    background:#333232;
-    fill: white;
 }
-    
+
+#search {
+    flex: 0 1 600px;
+    align-items: center;
+    min-width: 0;
+    width: 40px;
+    padding: 0 4px 0 16px;
+}
+
 #searchInput {
-    width: 500px;
-    height: 30px;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    background: rgba(62, 61, 61, 0.6);
-    border: solid 1px rgba(62, 61, 61, 0.5);
-    flex-shrink: 1; 
+    width: 732px;
+    height: 40px;
+    padding: 0 4px 0 16px;
+    border-radius: 40px 0 0 40px;
+    background-color: #fff;
+    border: solid 1px #c6c6c6;
+    margin-left: 32px; 
     flex: 1 1 auto;
+    display: flex;
+    cursor: text;
 }
-
-
 
 #searchIcon {
-    width: 50px;
-    height: 25px;
-    padding: 3.3px;
-
+    width: 24px;
+    height: 24px;
+    padding: 8px 16px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    border: solid 1px #333232 ;
-
+    border: solid 1px #d3d3d3;
     border-left: none;
-    background:#333232;
+    background: #f8f8f8;
+    color: black;
 }
 
 #micIcon {
     border-radius: 18px;
-    padding: 6px;
-    background:#333232;
+    padding: 8px 16px;
+    background: #e7e5e5;
     margin-left: 12px;
 }
 
-#micIcon:hover,#notificationIcon:hover {
+#micIcon svg {
+    width: 40px;
+}
+
+#micIcon:hover,
+#notificationIcon:hover {
     background-color: #3a3a3a;
 }
 
-#user{
+/* USER SECTION */
+#user {
     display: flex;
     margin-right: 20px;
     min-width: 213px;
     height: 40px;
     align-items: center;
     padding-left: 10px;
-    padding-right: 10px ;
+    padding-right: 10px;
 }
 
-#theme-toggle {
-    margin-right: 6px;
-    padding: 6px;
-    border: none;
-    border-radius: 18px;
-    height:38px ;
-    width: 50px ;
-    background:#333232;
-
-}
-#create-button {
-    display: flex;         
-    flex-shrink: 0; 
-    align-items: center;
-    gap: 6px;               
-
-}
 #user-button {
     border-radius: 9999px;
     border: none;
@@ -116,12 +110,19 @@ nav section, button {
     font-weight: 500;
     font-size: 14px;
     cursor: pointer;
-    background-color:#333232;
-
+    background: #e7e5e5;
 }
 
 #user-button:hover {
-    background-color: #272727;
+    color: #272727;
+}
+
+#create-button {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 6px;
+    background: #e7e5e5;
 }
 
 #user > img {
@@ -135,7 +136,7 @@ nav section, button {
     flex-shrink: 0;
 }
 
-#notificationIcon{
+#notificationIcon {
     border-radius: 18px;
     width: 24px;
     height: 24px;
@@ -143,15 +144,10 @@ nav section, button {
     margin-left: 16px;
     cursor: pointer;
     flex-shrink: 0;
-    background:#333232;
-
+    background: #e7e5e5;
 }
 
-#notificationIcon:hover {
-    background-color:#333232;
-;
-}
-
+/* SIDEBAR */
 aside {
     top: 56px;
     position: fixed;
@@ -165,25 +161,22 @@ aside {
 }
 
 .side-group {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    width:240px;
+    width: 240px;
     padding: 12px;
     border-bottom: 1px solid #272727;
 }
 
-
-
 .side-button {
     display: flex;
     align-items: center;
-    gap: 24px;
+    margin-right: 24px;
     padding: 0 12px;
     height: 40px;
     border-radius: 10px;
-    color: white;
+    color: black;
     cursor: pointer;
-    
 }
 
 .side-button span {
@@ -192,69 +185,74 @@ aside {
 }
 
 .side-button:hover {
-    background-color: #272727;
+    background-color: #c9c6c6;
 }
 
 .side-button.active {
-    background-color: #3a3a3a;
+    background-color: #d3d3d3; /* Added a light color for active state */
     font-weight: 500;
 }
 
-.side-button  img {
+.side-button img {
     margin-right: 24px;
-    filter: brightness(0) invert(1);
-    color:white;
-      width: 24px;
+    color: black;
+    width: 24px;
     height: 24px;
 }
 
-
 .menu-title {
-    
     height: 40px;
     border-radius: 10px;
     align-items: center;
     display: flex;
     padding: 1.5px 6px;
-    background: black;
+    color: black;
+    background: white;
 }
 
-.user-label  {
+.menu-title:hover {
+    background-color: #c9c6c6;
+}
+
+.user-label {
     font-weight: 550;
     padding-right: 8px;
-    
     font-size: 18px;
     margin-left: 10px;
 }
 
+/* FOOTER */
 footer {
     padding: 16px 24px 0;
-    border-top: 1px solid rgb(96 96 96);
+    border-top: 1px solid rgb(96, 96, 96);
     font-size: 16px; 
     flex-wrap: wrap;
-    
+    background-color: #f0f0f0;
 }
 
-footer a{
+footer a {
     text-decoration: none;
     margin-right: 8px;
-    color:rgb(96 96 96) ;
+    color: rgb(96, 96, 96);
     font-size: 13px;
     font-weight: 600;
 }
 
 footer, p {
-   font-size: 13px;
-   color: #909090 ;
+    font-size: 13px;
+    color: #909090;
 }
 
+/* MAIN CONTENT */
 main {
-    margin-left:240px ;
+    margin-left: 240px;
     margin-top: 56px;
     padding: 16px;
 }
 
+/* VIDEO GRID */
 .video {
+    background: var(--card-bg);
     position: relative;
 }
 
@@ -264,64 +262,55 @@ main {
     grid-auto-rows: auto;
     gap: 18px;
 }
+
 .thumbnail {
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 12px;
+    cursor: pointer;
 }
 
-.thumbnail img,.thumbnail video {
+.thumbnail img, .thumbnail video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 12px;
 }
 
-.preview-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-}
-
-.video {
-  background: var(--card-bg);
-}
-
 .video-details {
     flex: 1;
 }
+
 .video-details .title {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 1.4;
     margin: 0;
-    color: #fff;
+    color: #272727;
+    cursor: pointer;
 }
 
 .posted-by {
     font-size: 12px;
-    column-rule: #aaa;
     margin-top: 4px;
-    color:#fff;
-
+    color: #272727;
+    cursor: pointer;
 }
 
 .details {
     display: flex;
-    gap: 8px;
     align-self: start;
     margin-top: 8px;
     padding: 0 4px;
 }
 
-
 .profile img {
     width: 34px;
     height: 34px;
-    border-radius: 50%;;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .more-options {
@@ -329,28 +318,37 @@ main {
     align-items: center;
     margin-left: auto;
     cursor: pointer;
-}
-
-.more-options svg {
-    width: 20px;
-    height: 20px;
-    fill: var(--text-color);
-    opacity: 0.8;
-}
-
-.more-options:hover svg {
-    fill: #fff;
-    opacity: 1;
-}
-
-:root {
-  --bg-color: #0f0f0f;
-  --text-color: #ffffff;
-  
-}
-
-.thumbnail {
     position: relative;
+}
+
+.more-btn {
+    cursor: pointer;
+    list-style: none;
+    font-size: 20px;
+}
+
+.speed-popup {
+  top: 5px;
+  right: 0;
+  background: #222;
+  color: white;
+  border-radius: 8px;
+  padding: 2px;
+  gap: 4px;
+  width: 120px;
+}
+
+.speed-popup button {
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 6px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.speed-popup button:hover {
+  background: rgba(255,255,255,0.1);
 }
 
 video-actions {
@@ -359,13 +357,10 @@ video-actions {
     right: 8px;
     bottom: 8px;
     flex-direction: row;
-    
 }
-
 
 .watch-later-btn,
 .playlist-btn {
-    background: rgba(0, 0, 0, 0.6);
     color: #fff;
     border: none;
     padding: 4px 6px;
@@ -373,5 +368,207 @@ video-actions {
     cursor: pointer;
     font-size: 14px;
     flex: auto;
-    
+}
+
+nav, #user, aside, footer {
+    background-color: #f5f5f5;
+    color: #000;
+}
+
+.side-button span,
+.menu-title,
+.video-details .title,
+.posted-by {
+    color: #000;
+}
+
+/* HIDE THE CHECKBOX */
+#theme-toggle {
+    display: none;
+}
+
+.theme-btn {
+    cursor: pointer;
+    font-size: 18px;
+    padding: 6px;
+}
+
+/* LIGHT MODE */
+.page {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+nav, #user, aside, footer {
+    background-color: #f5f5f5;
+    color: #000;
+}
+
+.side-button span,
+.menu-title,
+.video-details .title,
+.posted-by {
+    color: #000;
+}
+
+/* DARK MODE */
+/* Default (light mode) */
+.youtube-logo #youtube-paths_yt9 path {
+  fill: #000;
+}
+
+/* Dark mode */
+#theme-toggle:checked ~ .page nav .youtube-logo #youtube-paths_yt9 path {
+  fill: #fff;
+}
+
+
+.dark-mode .youtube-logo {
+  filter: brightness(0) invert(1);
+}
+#theme-toggle:checked ~ .page {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* NAV + USER SECTION */
+#theme-toggle:checked ~ .page nav,
+#theme-toggle:checked ~ .page #user {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* SIDEBAR + FOOTER */
+#theme-toggle:checked ~ .page aside,
+#theme-toggle:checked ~ .page footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+#theme-toggle:checked ~ .page .side-button span,
+#theme-toggle:checked ~ .page .menu-title,
+#theme-toggle:checked ~ .page .video-details .title,
+#theme-toggle:checked ~ .page .posted-by {
+    color: #ffffff;
+}
+
+/* DARK MODE for sidebar groups */
+#theme-toggle:checked ~ .page .side-group {
+    background-color: #2a2a2a;
+    border-bottom: 1px solid #444;
+}
+
+#theme-toggle:checked ~ .page .side-button {
+    color: #ffffff; 
+}
+
+#theme-toggle:checked ~ .page .side-button:hover {
+    background-color: #3a3a3a; 
+}
+
+#theme-toggle:checked ~ .page .menu-title {
+    background-color: #2a2a2a; 
+    color: #ffffff; 
+}
+
+#theme-toggle:checked ~ .page .side-button.active {
+    background-color: #444; 
+}
+
+
+.page,
+.page nav,
+.page #user,
+.page aside,
+.page footer,
+.page .side-group,
+.page .side-button,
+.page .menu-title {
+    transition: background-color 0s ease, color 0s ease;
+}
+
+
+
+#theme-toggle:checked ~ .page nav {
+    background-color: #1e1e1e; 
+    color: #ffffff; 
+    border-bottom: 1px solid #444; 
+}
+
+
+#theme-toggle:checked ~ .page nav button,
+#theme-toggle:checked ~ .page nav section {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+
+#theme-toggle:checked ~ .page nav button:hover,
+#theme-toggle:checked ~ .page nav section:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+
+#theme-toggle:checked ~ .page #searchInput {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border-color: #444;
+}
+
+#theme-toggle:checked ~ .page #searchIcon {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #444;
+}
+
+#theme-toggle:checked ~ .page #micIcon {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+#theme-toggle:checked ~ .page #micIcon:hover {
+    background-color: #555555;
+}
+
+
+#theme-toggle:checked ~ .page ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+#theme-toggle:checked ~ .page ::-webkit-scrollbar-track {
+    background: #1a1a1a; 
+}
+
+#theme-toggle:checked ~ .page ::-webkit-scrollbar-thumb {
+    background-color: #444; 
+    border-radius: 6px;
+    border: 3px solid #1a1a1a;
+}
+
+#theme-toggle:checked ~ .page ::-webkit-scrollbar-thumb:hover {
+    background-color: #666;
+}
+
+
+#theme-toggle:checked ~ .page {
+    scrollbar-width: thin;
+    scrollbar-color: #444 #1a1a1a;
+}
+
+
+#theme-toggle:checked ~ .page .watch-later-btn,
+#theme-toggle:checked ~ .page .playlist-btn,
+#theme-toggle:checked ~ .page .more-options {
+    background-color: #131313; 
+    color: #fff;              
+    border: none;              
+}
+
+
+#theme-toggle:checked ~ .page .watch-later-btn:hover,
+#theme-toggle:checked ~ .page .playlist-btn:hover,
+#theme-toggle:checked ~ .page .more-options:hover {
+    background-color: #3a3a3a; 
 }
